@@ -107,7 +107,6 @@ impl Solution for Day8 {
         let last_edge = edges
             .iter()
             .find(|&&(a, b)| {
-                // a must be present somewhere. unwrap is safe here
                 let (index_a, ..) = groups
                     .iter()
                     .find_position(|group| group.contains(&a))
