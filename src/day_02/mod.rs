@@ -85,9 +85,8 @@ impl Solution for Day2 {
                         // e.g. 010101
                         // compute by iterating 3 (repeat) times
                         // we take 10^0 + 10^2 + 10^4
-                        let pattern = (0..repeats).fold(0, |acc, position| {
-                            acc + 10i64.pow(position * chunk_digits)
-                        });
+                        let pattern = (0..repeats)
+                            .fold(0, |acc, position| acc + 10i64.pow(position * chunk_digits));
                         // go from lower to upper and add any matches
                         (lower_first_part..=upper_first_part)
                             .map(move |first_part| first_part * pattern)
