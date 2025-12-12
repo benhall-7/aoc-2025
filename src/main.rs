@@ -7,6 +7,9 @@ pub mod day_06;
 pub mod day_07;
 pub mod day_08;
 pub mod day_09;
+pub mod day_10;
+pub mod day_11;
+
 pub trait Solution {
     fn problem1(&mut self) {
         println!("TODO");
@@ -27,6 +30,8 @@ fn main() {
         Box::new(day_07::Day7),
         Box::new(day_08::Day8),
         Box::new(day_09::Day9),
+        Box::new(day_10::Day10),
+        Box::new(day_11::Day11),
     ];
 
     let solution = solutions[..].iter_mut().last().unwrap();
