@@ -36,8 +36,14 @@ fn main() {
         Box::new(day_12::Day12),
     ];
 
-    let solution = solutions[..].iter_mut().last().unwrap();
-
-    solution.problem1();
-    solution.problem2();
+    let solution = solutions
+        .iter_mut()
+        .enumerate()
+        .for_each(|(ind, solution)| {
+            println!("DAY {}:", ind + 1);
+            println!("PART 1");
+            solution.problem1();
+            println!("PART 2");
+            solution.problem2();
+        });
 }

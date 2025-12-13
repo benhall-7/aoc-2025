@@ -145,7 +145,7 @@ impl Solution for Day10 {
                 .expect("expected at least 1 variable");
             optimize.minimize(&objective);
 
-            println!("system:\n{:#?}", optimize);
+            // println!("system:\n{:#?}", optimize);
 
             match optimize.check(&[]) {
                 SatResult::Unknown => panic!(
@@ -165,7 +165,7 @@ impl Solution for Day10 {
 
         let sum = solutions.fold(0i64, |acc, solution| {
             let sol = solution.as_i64().unwrap();
-            println!("{sol}");
+            // println!("{sol}");
             acc + sol
         });
         println!("{sum}")
